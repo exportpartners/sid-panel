@@ -5,98 +5,132 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Amazon Takip Paneli · Export Partners</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--lac:#232F3E;--tur:#FF7D07;--krem:#F8F5F4;--gri:#6B7280;--cizgi:#E6E8EC;--yes:#2E7D32;--sar:#F0B13C}
-*{box-sizing:border-box}
-body{margin:0;font-family:'Poppins','Segoe UI',Arial,sans-serif;color:#1E1810;background:#fff;font-size:15px;line-height:1.55}
-header{background:var(--lac);color:#fff;padding:18px 16px}
-.ic{max-width:1000px;margin:0 auto;padding:0 16px}
-header .ic{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:0}
-.logo{font-weight:700;font-size:20px}.logo i{font-style:normal;color:var(--tur)}
-.rozet{border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 12px;font-size:11px;letter-spacing:.08em}
-h1{font-size:26px;margin:24px 0 2px;color:var(--lac)}
-.alt{color:var(--gri);font-size:13px;margin:0 0 18px}
-h2{font-size:18px;color:var(--lac);margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--tur)}
-.kutular{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.kt{background:var(--krem);border:1px solid var(--cizgi);border-left:4px solid var(--tur);border-radius:6px;padding:10px 12px}
-.kt .k{font-size:11px;letter-spacing:.08em;color:var(--gri);font-weight:600;text-transform:uppercase}
-.kt .v{font-size:24px;font-weight:700;color:var(--lac)}
-.adim{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--cizgi)}
-.no{flex:0 0 30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;background:#C4CBD8}
-.adim.tamam .no{background:var(--yes)}.adim.devam .no{background:var(--tur)}
-.adim b{color:var(--lac)}.etk{font-size:11px;font-weight:600;border-radius:999px;padding:2px 9px;margin-left:6px;vertical-align:middle}
-.tamam .etk{background:#E7F3E8;color:var(--yes)}.devam .etk{background:#FFF1E2;color:#B85600}.bekliyor .etk{background:#EEF0F3;color:var(--gri)}
-.adim p{margin:2px 0 0;color:#2E3A49;font-size:13.5px}.tarih{color:var(--gri);font-size:12px}
-.tablo{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
-th{background:var(--lac);color:#fff;text-align:left;padding:8px 10px;font-weight:600;font-size:12px}
-td{border-bottom:1px solid var(--cizgi);padding:8px 10px}td.s{text-align:right;white-space:nowrap}
-tr.top td{font-weight:700;background:var(--krem)}
-.not{font-size:12.5px;color:var(--gri);margin-top:6px}
-.iki{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.liste{border:1px solid var(--cizgi);border-radius:10px;padding:12px 14px}
-.liste h3{margin:0 0 6px;font-size:14px;color:var(--lac)}.liste ol{margin:0;padding-left:20px;font-size:13.5px}
-.dosya a{display:inline-block;background:var(--tur);color:#fff;font-weight:600;border-radius:999px;padding:7px 16px;text-decoration:none;font-size:13px;margin:4px 6px 4px 0}
-.strat{border:1px solid var(--cizgi);border-radius:10px;padding:10px 14px;margin:8px 0}.strat b{color:var(--lac)}
-footer{margin-top:36px;border-top:1px solid var(--cizgi);padding:14px 0 28px;font-size:12px;color:var(--gri)}
+:root{--ink:#0E1B3D;--paper:#f4f5f8;--card:#fff;--line:#e3e6ec;--orange:#ff7d07;--text:#1a2238;--muted:#8a90a0;--green:#2E7D4F;--blueL:#cfe3fb}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--text);font-size:14px;line-height:1.5}
+header{background:var(--ink);color:#fff;padding:12px 16px;display:flex;align-items:center;gap:14px;border-bottom:3px solid var(--orange);position:sticky;top:0;z-index:60}
+.logo{font-weight:800;font-size:19px;letter-spacing:-.2px}.logo i{font-style:normal;color:var(--orange)}
+.htitle{font-size:12px;font-weight:600;color:#cdd6e4;letter-spacing:.5px;border-left:1px solid #2c3d66;padding-left:14px}
+.htitle small{display:block;color:#7a86a0;font-size:9.5px;letter-spacing:.6px;margin-top:2px}
+.logbtn{margin-left:auto;background:transparent;border:1px solid #3a4a72;color:#cdd6e4;border-radius:8px;padding:6px 12px;font:600 12px inherit;cursor:pointer}
+.wrap{max-width:1200px;margin:0 auto;padding:14px 14px 40px}
+.tabs{display:flex;gap:8px;margin:4px 0 12px;flex-wrap:wrap}
+.tab{background:#fff;border:2px solid var(--ink);border-radius:11px;padding:9px 18px;font-size:13px;font-weight:800;letter-spacing:.3px;color:var(--ink);cursor:pointer;font-family:inherit}
+.tab.on{background:var(--ink);color:#fff;box-shadow:0 2px 6px rgba(14,27,61,.3)}
+.ozet{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}
+.kt{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:0 1px 4px rgba(14,27,61,.05)}
+.kt .k{font-size:10.5px;letter-spacing:.6px;color:var(--muted);font-weight:700;text-transform:uppercase}
+.kt .v{font-size:24px;font-weight:800;color:var(--ink)}
+.kart{background:var(--card);border:1px solid var(--line);border-radius:13px;box-shadow:0 1px 4px rgba(14,27,61,.05);overflow:auto}
+table{border-collapse:collapse;width:100%;min-width:640px}
+thead th{background:var(--ink);color:#fff;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;text-align:left;padding:10px;white-space:nowrap}
+tbody td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:middle;font-size:13px}
+td.s{text-align:right;white-space:nowrap}
+.secbar td{background:#f6f8fb;padding:8px 10px}
+.secpill{display:inline-flex;gap:8px;align-items:center;background:var(--orange);color:#fff;border-radius:10px;padding:6px 14px;font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+.secpill .n{color:#ffe3c7;font-size:11px}
+.secpill.ink{background:var(--ink)}.secpill.gr{background:var(--green)}
+.dur{display:inline-block;border-radius:999px;padding:3px 10px;font-size:11.5px;font-weight:700;white-space:nowrap}
+.dur.tamam{background:#E5F2EA;color:var(--green)}.dur.devam{background:#FFF0E0;color:#B85600}.dur.bekliyor{background:#EEF0F3;color:#5b6475}
+.kim{font-size:12px;font-weight:700;color:var(--ink);white-space:nowrap}
+.acik{color:#4a5468;font-size:12.5px}
+.gantt td.g{padding:0;position:relative;height:42px;min-width:480px}
+.gbar{position:absolute;top:12px;height:18px;border-radius:6px;background:var(--blueL)}
+.gbar.tamam{background:#9fd3b2}.gbar.devam{background:var(--orange)}
+.gbar.bekliyor{background:repeating-linear-gradient(45deg,#cfe3fb,#cfe3fb 6px,#e8f1fd 6px,#e8f1fd 12px)}
+.gbugun{position:absolute;top:0;bottom:0;width:2px;background:#c0392b}
+.not{font-size:12px;color:var(--muted);margin:8px 2px}
+.dosya{display:flex;flex-wrap:wrap;gap:8px;padding:14px}
+.dosya a{background:var(--orange);color:#fff;font-weight:700;border-radius:9px;padding:9px 16px;text-decoration:none;font-size:13px}
+.strat{padding:12px 16px;border-top:1px solid var(--line)}.strat:first-child{border-top:0}.strat b{color:var(--ink)}
+.soru{padding:14px}
+.soru textarea{width:100%;min-height:90px;padding:10px;border:1px solid #c9cfda;border-radius:9px;font:inherit}
+.soru button{margin-top:8px;background:var(--orange);color:#fff;border:0;border-radius:9px;padding:9px 18px;font:800 13px inherit;cursor:pointer}
+.sc{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}.sc .z{color:var(--muted);font-size:11.5px}
+.sc .c{margin-top:6px;padding:8px 10px;background:#f6f8fb;border-radius:8px}
+footer{margin-top:24px;font-size:11.5px;color:var(--muted)}
 #giris{max-width:360px;margin:12vh auto;padding:0 16px;text-align:center}
-#giris input{width:100%;padding:12px;border:1px solid #C4CBD8;border-radius:8px;font:inherit;margin:12px 0}
-#giris button{width:100%;padding:12px;border:0;border-radius:999px;background:var(--tur);color:#fff;font:600 15px inherit;cursor:pointer}
-#hata{color:#B3261E;font-size:13px;min-height:18px}
-.soru textarea{width:100%;min-height:90px;padding:10px;border:1px solid #C4CBD8;border-radius:8px;font:inherit}
-.soru button{margin-top:8px;padding:10px 22px;border:0;border-radius:999px;background:var(--tur);color:#fff;font:600 14px 'Poppins',sans-serif;cursor:pointer}
-.sc{border:1px solid var(--cizgi);border-radius:10px;padding:10px 14px;margin:8px 0;font-size:14px}.sc .z{color:var(--gri);font-size:12px}
-.sc .c{margin-top:6px;padding:8px 10px;background:var(--krem);border-radius:8px}.sc .c b{color:var(--lac)}
-@media(max-width:640px){.iki{grid-template-columns:1fr}h1{font-size:22px}}
+#giris h1{color:var(--ink);font-size:22px}
+#giris input{width:100%;padding:12px;border:1px solid #c9cfda;border-radius:9px;font:inherit;margin:12px 0}
+#giris button{width:100%;padding:12px;border:0;border-radius:9px;background:var(--orange);color:#fff;font:800 15px inherit;cursor:pointer}
+#hata{color:#c0392b;font-size:13px;min-height:18px}
+[hidden]{display:none!important}
+@media(max-width:640px){.htitle{display:none}.tab{padding:8px 12px;font-size:12px}}
 </style>
 </head>
 <body>
-<header><div class="ic"><div class="logo">Export<i>Partners</i></div><span class="rozet">AMAZON SPN VERIFIED PARTNER</span></div></header>
+<header><div class="logo">Export<i>Partners</i></div><div class="htitle">AMAZON TAKİP PANELİ<small id="hfirma">AMAZON SPN VERIFIED SERVICE PROVIDER</small></div>
+<button class="logbtn" onclick="location.href=location.pathname+'?v='+Date.now()">⟳ Yenile</button></header>
 <div id="giris">
   <h1>Amazon takip paneli</h1>
-  <p class="alt">Size iletilen şifreyle giriş yapın.</p>
+  <p class="not">Size iletilen şifreyle giriş yapın.</p>
   <input id="sifre" type="password" placeholder="Şifre" autocomplete="current-password">
   <button id="gir" type="button">Giriş</button>
   <div id="hata"></div>
 </div>
-<main id="panel" class="ic" hidden></main>
+<div class="wrap" id="panel" hidden></div>
 <script>
-const VERI={"tuz": "tF6DL3UIkAVFF2nqDXzHgw==", "iv": "LQhNZZiXcXWAv5te", "tur": 200000, "veri": "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"};
+const VERI={"tuz": "h6+27+vVIGr5n1N1Md5HZg==", "iv": "iZV6dMRh2zwUPpkm", "tur": 200000, "veri": "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"};
 const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 async function coz(sifre){
   const anah=await crypto.subtle.importKey('raw',new TextEncoder().encode(sifre),'PBKDF2',false,['deriveKey']);
   const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(VERI.tuz),iterations:VERI.tur,hash:'SHA-256'},anah,{name:'AES-GCM',length:256},false,['decrypt']);
-  const acik=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(VERI.iv)},key,b64(VERI.veri));
-  return JSON.parse(new TextDecoder().decode(acik));
+  return JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(VERI.iv)},key,b64(VERI.veri))));
 }
 const e=x=>String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;');
-const say=v=>v==null?'—':v;
-function ciz(d){
-  const ETK={tamam:'Tamamlandı',devam:'Devam ediyor',bekliyor:'Bekliyor'};
-  const st=d.stok||{};const api=!!d.api;
-  let h=`<h1>${e(d.firma)} · ${e(d.pazar)}</h1><p class="alt">Son güncelleme: ${e(d.guncelleme)}${api?'':' · '+e(d.guncelleme_notu)}</p>`;
-  const toplam=k=>d.urunler.reduce((s,u)=>s+((st[u.sku]||{})[k]||0),0);
-  h+=`<div class="kutular">
-   <div class="kt"><div class="k">Sevkiyattaki ürün</div><div class="v">${d.urunler.reduce((s,u)=>s+(u.gonderilecek||0),0)}</div></div>
-   <div class="kt" style="border-left-color:var(--sar)"><div class="k">Yolda / sayılıyor</div><div class="v">${api?toplam('yolda'):'—'}</div></div>
-   <div class="kt" style="border-left-color:var(--yes)"><div class="k">Satılabilir</div><div class="v">${api?toplam('satilabilir'):'—'}</div></div>
-   <div class="kt" style="border-left-color:var(--lac)"><div class="k">Rezerve</div><div class="v">${api?toplam('rezerve'):'—'}</div></div></div>`;
-  h+='<h2>Süreç, adım adım</h2>'+d.adimlar.map((a,i)=>`<div class="adim ${a.durum}"><div class="no">${a.durum==='tamam'?'✓':i+1}</div><div><b>${e(a.ad)}</b><span class="etk">${ETK[a.durum]||''}</span> <span class="tarih">${e(a.tarih)}</span><p>${e(a.aciklama)}</p></div></div>`).join('');
-  h+=`<h2>Stok durumu</h2><div class="tablo"><table><tr><th>Ürün</th><th class="s">Sevkiyatta</th><th class="s">Yolda / sayılıyor</th><th class="s">Satılabilir</th><th class="s">Rezerve</th><th class="s">Satılamaz</th></tr>`+
-   d.urunler.map(u=>{const s=st[u.sku]||{};return `<tr><td><b>${e(u.sku)}</b>${u.ad!==u.sku?'<br><span class="not">'+e(u.ad)+'</span>':''}</td><td class="s">${say(u.gonderilecek)}</td><td class="s">${api?say(s.yolda):'—'}</td><td class="s">${api?say(s.satilabilir):'—'}</td><td class="s">${api?say(s.rezerve):'—'}</td><td class="s">${api?say(s.satilamaz):'—'}</td></tr>`}).join('')+
-   `</table></div><p class="not"><b>Rezerve:</b> satılmış ama henüz gönderilmemiş ya da Amazon'un depolar arası taşıdığı ürünler. <b>Satılamaz:</b> hasarlı ya da kusurlu sayılan ürünler.</p>`;
-  h+=`<h2>Sevkiyatlar</h2><div class="tablo"><table><tr><th>Sevkiyat no</th><th class="s">Koli</th><th class="s">Ürün</th><th>Ağırlık</th><th>Çıkış</th><th>Kargo</th><th>Durum</th></tr>`+
-   d.sevkiyatlar.map(s=>`<tr><td><b>${e(s.no)}</b></td><td class="s">${e(s.koli)}</td><td class="s">${e(s.adet)}</td><td>${e(s.agirlik)}</td><td>${e(s.cikis)}</td><td>${e(s.kargo)}</td><td>${e(s.durum)}</td></tr>`).join('')+'</table></div>';
-  h+=`<h2>Sırada ne var</h2><div class="iki"><div class="liste"><h3>Sizden beklenen</h3><ol>${d.sizden.map(x=>'<li>'+e(x)+'</li>').join('')}</ol></div><div class="liste"><h3>Bizim yapacağımız</h3><ol>${d.bizden.map(x=>'<li>'+e(x)+'</li>').join('')}</ol></div></div>`;
-  h+=`<h2>Dosyalar</h2><div class="dosya">${d.dosyalar.map(f=>`<a href="${e(f.link)}" target="_blank" rel="noopener">${e(f.ad)}</a>`).join('')}</div>`;
-  h+=`<h2>Strateji</h2>${d.strateji.map(s=>`<div class="strat"><b>${e(s.baslik)}</b><br>${e(s.metin)}</div>`).join('')}`;
-  h+=`<h2>Sorularınız</h2><div class="soru"><p class="not" style="margin-top:0">Sorunuzu buraya yazın; günde bir kez yanıtlıyoruz. Yanıt bu bölümde, sorunuzun altında görünür.</p><textarea id="soruMetin" placeholder="Sorunuz"></textarea><br><button id="soruGonder" type="button">Gönder</button> <span id="soruMsg" class="not"></span><div id="soruListe"></div></div>`;
-  h+=`<footer>Export Partners LLC · 5835 Callaghan Rd, Ste 204-0501, San Antonio, Texas 78228, USA<br>Barbaros Mah. Mor Sümbül Sk. Nidakule Blok No:7/3F, Ataşehir, İstanbul<br>exportpartners.com.tr · exportpartnersllc.com</footer>`;
-  const p=document.getElementById('panel');p.innerHTML=h;p.hidden=false;document.getElementById('giris').hidden=true;
+const ETK={tamam:'Tamamlandı',devam:'Devam ediyor',bekliyor:'Bekliyor'};
+const AY=['Oca','Şub','Mar','Nis','May','Haz','Tem','Ağu','Eyl','Eki','Kas','Ara'];
+const gun=s=>new Date(s+'T12:00').getTime();
+const tf=s=>{if(!s)return '';const d=new Date(s+'T12:00');return d.getDate()+' '+AY[d.getMonth()]};
+function sekme(id){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.t===id));
+  document.querySelectorAll('section').forEach(s=>s.hidden=s.id!=='s-'+id);try{localStorage.setItem('sidsekme',id)}catch(_){}}
+function tarihYaz(a){if(a.durum==='tamam')return e(a.tarih||tf(a.bit));if(!a.bit)return e(a.tarih||'');return tf(a.bit)+'<div class="acik">tahmini</div>';}
+function gorevler(d){
+  const grup=[['devam','Şu an yapılan','ink'],['bekliyor','Sırada',''],['tamam','Tamamlananlar','gr']];
+  let h='<div class="kart"><table><thead><tr><th style="width:120px">Durum</th><th>İş</th><th style="width:140px">Kim yapıyor</th><th style="width:100px">Tarih</th></tr></thead><tbody>';
+  for(const [k,ad,c] of grup){const L=d.adimlar.filter(a=>a.durum===k);if(!L.length)continue;
+    h+=`<tr class="secbar"><td colspan="4"><span class="secpill ${c}">${ad} <span class="n">${L.length}</span></span></td></tr>`;
+    h+=L.map(a=>`<tr><td><span class="dur ${a.durum}">${ETK[a.durum]}</span></td><td><b>${e(a.ad)}</b><div class="acik">${e(a.aciklama)}</div></td><td class="kim">${e(a.kim||'')}</td><td>${tarihYaz(a)}</td></tr>`).join('');}
+  return h+'</tbody></table></div>';
 }
-
+function cizelge(d){
+  const L=d.adimlar.filter(a=>a.bas&&a.bit);if(!L.length)return '<p class="not">Zaman çizelgesi henüz yok.</p>';
+  let a0=Math.min(...L.map(a=>gun(a.bas)))-2*864e5,a1=Math.max(...L.map(a=>gun(a.bit)))+3*864e5;
+  const W=a1-a0,yuz=t=>((t-a0)/W*100),bug=Date.now();
+  let ust='';for(let t=new Date(a0);t.getTime()<=a1;t.setDate(t.getDate()+7))ust+=`<span style="position:absolute;left:${yuz(t.getTime()).toFixed(2)}%;top:9px;font-size:10px;color:#cdd6e4">${t.getDate()} ${AY[t.getMonth()]}</span>`;
+  let h=`<div class="kart"><table class="gantt"><thead><tr><th style="width:210px">İş</th><th style="position:relative;height:32px">${ust}</th></tr></thead><tbody>`;
+  h+=L.map(a=>{const x=yuz(gun(a.bas)),w=Math.max(1.5,yuz(gun(a.bit)+864e5)-x);
+    return `<tr><td><b>${e(a.ad)}</b><div class="acik">${tf(a.bas)}${a.bas!==a.bit?' – '+tf(a.bit):''}${a.durum==='tamam'?'':' · tahmini'}</div></td><td class="g"><div class="gbar ${a.durum}" style="left:${x.toFixed(2)}%;width:${w.toFixed(2)}%"></div>${bug>a0&&bug<a1?`<div class="gbugun" style="left:${yuz(bug).toFixed(2)}%"></div>`:''}</td></tr>`}).join('');
+  return h+'</tbody></table></div><p class="not">Kırmızı çizgi bugünü gösterir. Yeşil: tamamlanan, turuncu: devam eden, çizgili: sıradaki işlerin tahmini tarihleri. Kargo, depo kabulü ve sayım süreleri tahminidir; Amazon tarafı ilerledikçe panel kendiliğinden güncellenir.</p>';
+}
+function stok(d){
+  const st=d.stok||{},api=!!d.api,s=k=>d.urunler.reduce((t,u)=>t+((st[u.sku]||{})[k]||0),0),v=x=>api?(x==null?'—':x):'—';
+  let h=`<div class="ozet"><div class="kt"><div class="k">Sevkiyattaki ürün</div><div class="v">${d.urunler.reduce((t,u)=>t+(u.gonderilecek||0),0)}</div></div>
+  <div class="kt"><div class="k">Yolda / sayılıyor</div><div class="v">${v(s('yolda'))}</div></div>
+  <div class="kt"><div class="k">Satılabilir</div><div class="v">${v(s('satilabilir'))}</div></div>
+  <div class="kt"><div class="k">Rezerve</div><div class="v">${v(s('rezerve'))}</div></div></div>`;
+  h+=`<div class="kart"><table><thead><tr><th>Ürün</th><th>Depo kodu</th><th class="s">Sevkiyatta</th><th class="s">Yolda / sayılıyor</th><th class="s">Satılabilir</th><th class="s">Rezerve</th><th class="s">Satılamaz</th></tr></thead><tbody>`+
+   d.urunler.map(u=>{const x=st[u.sku]||{};return `<tr><td><b>${e(u.sku)}</b></td><td>${e(u.fnsku||'')}</td><td class="s">${e(u.gonderilecek)}</td><td class="s">${v(x.yolda)}</td><td class="s">${v(x.satilabilir)}</td><td class="s">${v(x.rezerve)}</td><td class="s">${v(x.satilamaz)}</td></tr>`}).join('')+'</tbody></table></div>';
+  h+=`<p class="not"><b>Yolda / sayılıyor:</b> Amazon'un sevkiyat kaydındaki adet; koli UPS'e verilmeden de burada görünür. <b>Rezerve:</b> satılmış ama henüz gönderilmemiş ürünler. <b>Satılamaz:</b> hasarlı ya da kusurlu sayılan ürünler.</p>`;
+  h+=`<div class="kart" style="margin-top:12px"><table><thead><tr><th>Sevkiyat no</th><th class="s">Koli</th><th class="s">Ürün</th><th>Ağırlık</th><th>Çıkış</th><th>Varış deposu</th><th>Kargo takip</th><th>Durum</th></tr></thead><tbody>`+
+   d.sevkiyatlar.map(x=>`<tr><td><b>${e(x.no)}</b></td><td class="s">${e(x.koli)}</td><td class="s">${e(x.adet)}</td><td>${e(x.agirlik)}</td><td>${e(x.cikis)}</td><td>${e(x.depo||'')}</td><td>${e(x.takip||x.kargo)}</td><td>${e(x.durum)}</td></tr>`).join('')+'</tbody></table></div>';
+  return h;
+}
+function ciz(d){
+  document.getElementById('hfirma').textContent=(d.firma+' · '+d.pazar).toUpperCase();
+  const dev=d.adimlar.filter(a=>a.durum!=='tamam').length,tam=d.adimlar.length-dev;
+  let h=`<div class="tabs"><button class="tab" data-t="gorev">Yapılacak işler</button><button class="tab" data-t="zaman">Zaman çizelgesi</button><button class="tab" data-t="stok">Stok ve sevkiyat</button><button class="tab" data-t="belge">Belgeler</button><button class="tab" data-t="strat">Strateji</button><button class="tab" data-t="soru">Sorularınız</button></div>`;
+  h+=`<p class="not" style="margin-top:0">Son güncelleme: ${e(d.guncelleme)} · ${tam} iş tamamlandı, ${dev} iş sırada${d.api?' · Amazon verisi bağlı':' · '+e(d.guncelleme_notu)}</p>`;
+  h+=`<section id="s-gorev">${gorevler(d)}</section><section id="s-zaman">${cizelge(d)}</section><section id="s-stok">${stok(d)}</section>`;
+  h+=`<section id="s-belge"><div class="kart"><div class="dosya">${d.dosyalar.map(f=>`<a href="${e(f.link)}" target="_blank" rel="noopener">${e(f.ad)}</a>`).join('')}</div></div></section>`;
+  h+=`<section id="s-strat"><div class="kart">${d.strateji.map(s=>`<div class="strat"><b>${e(s.baslik)}</b><br>${e(s.metin)}</div>`).join('')}</div></section>`;
+  h+=`<section id="s-soru"><div class="kart soru"><p class="not" style="margin-top:0">Sorunuzu buraya yazın; günde bir kez yanıtlıyoruz. Yanıt bu bölümde, sorunuzun altında görünür.</p><textarea id="soruMetin" placeholder="Sorunuz"></textarea><br><button id="soruGonder" type="button">Gönder</button> <span id="soruMsg" class="not"></span><div id="soruListe"></div></div></section>`;
+  h+=`<footer>Export Partners LLC · 5835 Callaghan Rd, Ste 204-0501, San Antonio, Texas 78228, USA · Barbaros Mah. Mor Sümbül Sk. Nidakule Blok No:7/3F, Ataşehir, İstanbul · exportpartners.com.tr · exportpartnersllc.com</footer>`;
+  const p=document.getElementById('panel');p.innerHTML=h;p.hidden=false;document.getElementById('giris').hidden=true;
+  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>sekme(t.dataset.t));
+  let s='gorev';try{s=localStorage.getItem('sidsekme')||'gorev'}catch(_){}sekme(s);
+}
 const FB='https://export-partners-crm-default-rtdb.europe-west1.firebasedatabase.app/sid_panel_v1/sorular';
 let SK=null;
 const enc=new TextEncoder(),b64e=u=>btoa(String.fromCharCode(...new Uint8Array(u)));
