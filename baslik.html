@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SID Amazon Başlık Seçimi</title>
+<style>
+:root{--lac:#232F3E;--tur:#FF7D07;--zemin:#F7F5F2;--kart:#fff;--yazi:#1E1810;--soluk:#5B6170;--cizgi:#E6E8EC;
+--yesil:#2E7D32;--sari:#E0B000;--turuncu:#F07F12;--kirmizi:#C62828}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zemin);color:var(--yazi);font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Arial,sans-serif;font-size:16px;line-height:1.5}
+.ust{background:var(--lac);color:#fff;padding:22px max(16px,env(safe-area-inset-left,0px))}
+.ust h1{margin:0;font-size:22px}
+.ust p{margin:6px 0 0;color:#C4CBD8;font-size:14px}
+main{max-width:860px;margin:0 auto;padding:18px max(16px,env(safe-area-inset-left,0px)) 140px}
+.urun{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;padding:16px;margin-bottom:18px}
+.urun h2{margin:0 0 2px;font-size:19px}
+.urun .alt{color:var(--soluk);font-size:14px;margin-bottom:12px}
+label.sec{display:flex;gap:12px;align-items:flex-start;border:2px solid var(--cizgi);border-radius:12px;padding:12px;margin:10px 0;cursor:pointer}
+label.sec:has(input:checked){border-color:var(--lac);background:#F2F4F8}
+label.sec input{margin-top:4px;width:22px;height:22px;flex:0 0 22px;accent-color:var(--lac)}
+.icerik{flex:1;min-width:0}
+.bas{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-weight:700}
+.risk{font-size:12px;font-weight:700;color:#fff;border-radius:999px;padding:2px 10px}
+.r1{background:var(--yesil)}.r2{background:var(--sari);color:#1E1810}.r3{background:var(--turuncu)}.r4{background:var(--kirmizi)}
+.baslik{font-family:Consolas,Menlo,monospace;font-size:13px;background:#F7F5F2;border-radius:8px;padding:8px;margin-top:6px;overflow-wrap:anywhere}
+.not{font-size:13px;color:var(--soluk);margin-top:4px}
+.aciklama{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;padding:16px}
+.aciklama h2{font-size:18px;margin:0 0 8px}
+.aciklama div{display:flex;gap:10px;margin:10px 0}
+.aciklama .risk{flex:0 0 auto;height:fit-content}
+.alt-serit{position:fixed;left:0;right:0;bottom:0;background:var(--lac);color:#fff;padding:12px max(16px,env(safe-area-inset-left,0px)) calc(12px + env(safe-area-inset-bottom,0px))}
+.alt-serit .ic{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+#kod{font-family:Consolas,Menlo,monospace;font-size:15px;font-weight:700;overflow-wrap:anywhere}
+button{background:var(--tur);color:#fff;border:0;border-radius:999px;padding:10px 20px;font-weight:700;font-size:15px;cursor:pointer}
+#bilgi{font-size:13px;color:#C4CBD8;width:100%}
+</style>
+</head>
+<body>
+<div class="ust">
+<h1>Amazon başlık seçimi</h1>
+<p>Her ürün için bir seçeneğe tik atın. Alttaki kodu kopyalayıp WhatsApp'tan iletin; başlıklar bu koda göre güncellenir.</p>
+</div>
+<main id="liste"></main>
+<main style="padding-top:0">
+<div class="aciklama">
+<h2>Risk renkleri ne anlama geliyor</h2>
+<div><span class="risk r1">Düşük</span><span>Başlıkta başka marka adı yok. Şikâyet beklenmez. Müşteri tabanca adını başlıkta görmez, aramada tabanca adıyla daha zor bulunur.</span></div>
+<div><span class="risk r2">Orta-düşük</span><span>Tabanca adı "Compatible with" kalıbıyla yazılır; Amazon'un uyumlu parça için kabul ettiği kalıp budur. Marka sahibi yine de itiraz edebilir; bu durumda ilan geçici kapanabilir.</span></div>
+<div><span class="risk r3">Orta-yüksek</span><span>Springfield'ın sistem adı ve kesim kodu (AOS, A14B) başlıkta geçer. Marka şikâyeti ya da Amazon'un silah parçası incelemesi gelebilir.</span></div>
+<div><span class="risk r4">Yüksek</span><span>Tabancanın yanında optik markaları da başlıkta. Bu markalardan herhangi biri şikâyet ederse ilan kapanır ve hesap sağlığına puan yazılır; Swampfox şikâyeti bu şekilde gelmişti.</span></div>
+<p class="not">Her seçenekte ilan saat başı kontrol edilir. İlan satıştan düşerse ya da Amazon uyarı verirse başlık bir önceki haline döndürülür. Hangi optiklere uyduğu her ilanın ilk maddesinde "Compatible with" ile zaten yazılıdır.</p>
+</div>
+</main>
+<div class="alt-serit"><div class="ic">
+<span>Seçim kodu: <span id="kod">-</span></span>
+<button id="kopya" type="button">Kodu kopyala</button>
+<span id="bilgi">Dört üründe de seçim yapılınca kod tamamlanır.</span>
+</div></div>
+<script>
+var URUNLER=[
+{sku:"SID-1158",ad:"Open emitter plakası",optik:"HEX Dragonfly, Vortex Viper, Burris FastFire II/IV, Crimson Trace RAD Pro",sec:[
+["A","Mevcut, markasız",1,"StoneIron Defense SID-1158 Red Dot Optic Mount Adapter Plate, Open Emitter Footprint for Factory Optic Cut – 4140 Steel, Black Nitride","Şu an canlıda olan başlık."],
+["B","Compatible with Springfield",2,"StoneIron Defense SID-1158 Optic Mounting Plate Compatible with Springfield 1911 DS Prodigy – Open Emitter Red Dot Footprint – 4140 Steel, Black Nitride",""],
+["C","Tismotion gibi, optiksiz",3,"StoneIron Defense SID-1158 Optic Mounting Plate Compatible with AOS Agency Optic 1911 DS/A14B – Open Emitter Red Dot Footprint – 4140 Steel, Black Nitride",""],
+["D","Tismotion gibi, optikler de başlıkta",4,"StoneIron Defense SID-1158 Optic Mounting Plate Compatible with AOS Agency Optic 1911 DS/A14B, Compatible with HEX Dragonfly, Vortex Viper, Burris FastFire – 4140 Steel, Black Nitride",""]]},
+{sku:"SID-1159",ad:"RMR plakası (Tismotion'ın karşılığı)",optik:"Trijicon RMR ve SRO, Holosun 407C, 507C, 508T, Riton X3",sec:[
+["A","Mevcut, markasız",1,"StoneIron Defense SID-1159 Red Dot Optic Mount Adapter Plate, Full-Size Footprint – 4140 Steel, Black Nitride","Şu an canlıda olan başlık. Bu ilan 5 Kasım'da bir kez kaldırılıp 9 Kasım'da geri açıldı."],
+["B","Compatible with Springfield",2,"StoneIron Defense SID-1159 Optic Mounting Plate Compatible with Springfield 1911 DS Prodigy – Full-Size Red Dot Footprint – 4140 Steel, Black Nitride",""],
+["C","Tismotion gibi, optiksiz",3,"StoneIron Defense SID-1159 Optic Mounting Plate Compatible with AOS Agency Optic 1911 DS/A14B – Full-Size Red Dot Footprint – 4140 Steel, Black Nitride",""],
+["D","Tismotion gibi, optikler de başlıkta",4,"StoneIron Defense SID-1159 Optic Mounting Plate Compatible with AOS Agency Optic 1911 DS/A14B, Compatible with Holosun 407C/507C/508T, Trijicon RMR/SRO – 4140 Steel, Black Nitride","Tismotion başlığının birebir karşılığı."]]},
+{sku:"SID-1160",ad:"Büyük pencere plakası",optik:"EOTech EFLX, Bushnell RXS-250 ve RXS-100",sec:[
+["A","Mevcut, markasız (7 Kasım hali)",1,"StoneIron Defense SID-1160 Red Dot Optic Mount Adapter Plate, Large Window Footprint for Factory Optic Cut – 4140 Steel, Black Nitride","13 Kasım'dan beri canlıda deneme başlığı var: \"…for Springfield 1911 DS Prodigy Factory Optic Cut…\". A seçilirse markasız hale dönülür."],
+["B","Compatible with Springfield",2,"StoneIron Defense SID-1160 Optic Mounting Plate Compatible with Springfield 1911 DS Prodigy – Large Window Red Dot Footprint – 4140 Steel, Black Nitride",""],
+["C","Tismotion gibi, optiksiz",3,"StoneIron Defense SID-1160 Optic Mounting Plate Compatible with AOS Agency Optic 1911 DS – Large Window Red Dot Footprint – 4140 Steel, Black Nitride",""],
+["D","Tismotion gibi, optikler de başlıkta",4,"StoneIron Defense SID-1160 Optic Mounting Plate Compatible with AOS Agency Optic 1911 DS, Compatible with EOTech EFLX/Bushnell RXS-250/RXS-100 – 4140 Steel, Black Nitride","Holosun 507C/407C ve Trijicon RMR bu ürüne değil 1159'a uyar; bu yüzden burada EOTech ve Bushnell yazılıdır."]]},
+{sku:"SID-1161",ad:"Mikro (RMSc) plakası",optik:"Holosun 407K ve 507K, Shield RMSc, RMS2 ve SMSc, Hex Wasp, Bushnell RXC-200 ve RXU-200",sec:[
+["A","Mevcut, markasız",1,"StoneIron Defense SID-1161 Micro Red Dot Optic Mount Adapter Plate, Micro Footprint for Factory Optic Cut – 4140 Steel, Black Nitride","Şu an canlıda olan başlık."],
+["B","Compatible with Springfield",2,"StoneIron Defense SID-1161 Optic Mounting Plate Compatible with Springfield 1911 DS Prodigy – Micro Red Dot Footprint – 4140 Steel, Black Nitride",""],
+["C","Tismotion gibi, optiksiz",3,"StoneIron Defense SID-1161 Optic Mounting Plate Compatible with AOS Agency Optic 1911 DS/A14B – Micro Red Dot Footprint – 4140 Steel, Black Nitride",""],
+["D","Tismotion gibi, optikler de başlıkta",4,"StoneIron Defense SID-1161 Optic Mounting Plate Compatible with AOS Agency Optic 1911 DS/A14B, Compatible with Holosun 407K/507K, Shield RMSc – 4140 Steel, Black Nitride",""]]}];
+var RISK={1:["r1","Düşük"],2:["r2","Orta-düşük"],3:["r3","Orta-yüksek"],4:["r4","Yüksek"]};
+var liste=document.getElementById("liste"),h="";
+URUNLER.forEach(function(u,i){
+ h+='<section class="urun"><h2>'+(i+1)+'. '+u.sku+' · '+u.ad+'</h2><div class="alt">Uyduğu optikler: '+u.optik+'</div>';
+ u.sec.forEach(function(s){
+  h+='<label class="sec"><input type="radio" name="'+u.sku+'" value="'+s[0]+'"><span class="icerik"><span class="bas">'+s[0]+') '+s[1]+
+  ' <span class="risk '+RISK[s[2]][0]+'">'+RISK[s[2]][1]+'</span></span><div class="baslik">'+s[3]+'</div>'+(s[4]?'<div class="not">'+s[4]+'</div>':'')+'</span></label>';
+ });
+ h+='</section>';
+});
+liste.innerHTML=h;
+function kod(){var p=[],tam=true;URUNLER.forEach(function(u){var c=document.querySelector('input[name="'+u.sku+'"]:checked');if(c)p.push(u.sku.replace("SID-","")+c.value);else tam=false;});
+ document.getElementById("kod").textContent=p.length?p.join(" "):"-";
+ document.getElementById("bilgi").textContent=tam?"Kod tamam. Kopyalayıp WhatsApp'tan iletin.":"Dört üründe de seçim yapılınca kod tamamlanır.";return p.join(" ");}
+document.addEventListener("change",kod);
+document.getElementById("kopya").addEventListener("click",function(){var k=kod();if(!k)return;var b=document.getElementById("bilgi");
+ try{navigator.clipboard.writeText("SID başlık: "+k).then(function(){b.textContent="Kopyalandı: SID başlık: "+k;},function(){b.textContent="Kopyalanamadı, kodu elle yazın: "+k;});}catch(e){b.textContent="Kopyalanamadı, kodu elle yazın: "+k;}});
+</script>
+</body>
+</html>
