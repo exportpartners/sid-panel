@@ -18,6 +18,8 @@ header{background:var(--ink);color:#fff;padding:14px 16px;border-bottom:3px soli
 nav{order:2}main{order:1;min-width:0}
 nav h4{margin:6px 10px 6px;font-size:12px;letter-spacing:.08em;color:var(--muted)}
 nav{position:sticky;top:84px;align-self:start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;max-height:calc(100vh - 100px);overflow-y:scroll;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#F28A3C #F1F2F4}
+nav .menu-alt{position:sticky;bottom:-8px;margin:6px -8px -8px;padding:18px 10px 8px;text-align:center;font-size:12px;font-weight:700;color:#B45309;background:linear-gradient(rgba(255,255,255,0),#fff 55%);pointer-events:none}nav.sonda .menu-alt{display:none}
+@media(max-width:820px){nav .menu-alt{display:none}}
 nav::-webkit-scrollbar{width:8px}nav::-webkit-scrollbar-track{background:#F1F2F4;border-radius:8px}nav::-webkit-scrollbar-thumb{background:#F28A3C;border-radius:8px}
 nav a{display:block;padding:7px 10px;border-radius:8px;color:var(--text);text-decoration:none;font-size:14px}
 nav a:hover,nav a.on{background:#FFF1E4;color:#B45309}
@@ -88,7 +90,7 @@ V.bolumler.forEach(function(b){
  ic+='__GECIS_'+b.id+'__</section>';
 });
 V.bolumler.forEach(function(b,i){var o=V.bolumler[i-1],n=V.bolumler[i+1],g='<div class="gecis">'+(o?'<a href="#'+o.id+'"><small>← ÖNCEKİ</small>'+o.no+' '+esc(o.baslik)+'</a>':'<span style="flex:1"></span>')+(n?'<a class="sonra" href="#'+n.id+'"><small>SONRAKİ →</small>'+n.no+' '+esc(n.baslik)+'</a>':'<span style="flex:1"></span>')+'</div>';ic=ic.replace('__GECIS_'+b.id+'__',g)});
-document.getElementById("menu").innerHTML=menu;document.getElementById("icerik").innerHTML=ic;
+document.getElementById("menu").innerHTML=menu+'<div class="menu-alt">▼ Menüyü aşağı kaydırın</div>';document.getElementById("icerik").innerHTML=ic;
 var ara=document.getElementById("ara"),son=document.getElementById("sonuc");
 ara.addEventListener("input",function(){
  var q=norm(ara.value.trim());
@@ -110,6 +112,7 @@ function goster(){var h=decodeURIComponent(location.hash.slice(1)),el=h?document
  if(b){sN.textContent="BÖLÜM "+b.no+" · BURADASINIZ";sA.textContent=b.baslik}
  if(el&&el!==sec){el.scrollIntoView()}else{window.scrollTo(0,0)}}
 window.addEventListener("hashchange",goster);goster();
+var nvm=document.getElementById("menu");function sonda(){nvm.classList.toggle("sonda",nvm.scrollTop+nvm.clientHeight>=nvm.scrollHeight-4)}nvm.addEventListener("scroll",sonda);window.addEventListener("resize",sonda);sonda();
 document.getElementById("seritBtn").addEventListener("click",function(){document.body.classList.toggle("menu-acik");this.textContent=document.body.classList.contains("menu-acik")?"Kapat ✕":"İçindekiler ▾"});
 document.getElementById("menu").addEventListener("click",function(e){if(e.target.closest("a")){document.body.classList.remove("menu-acik");document.getElementById("seritBtn").textContent="İçindekiler ▾"}});
 document.addEventListener("click",function(e){if(document.body.classList.contains("menu-acik")&&!e.target.closest("nav")&&!e.target.closest("#serit")){document.body.classList.remove("menu-acik");document.getElementById("seritBtn").textContent="İçindekiler ▾"}});
